@@ -21,7 +21,7 @@ def todo_schema(todo_document) -> dict:
         "due_date": todo_document["due_date"],
     }
 
-def schema_validate(todo_documents: list) -> list:
+def schema_validate(todo_documents) -> list:
     """
     Aplica la conversión de esquema a una lista de documentos de tareas.
     :param todo_documents: Lista de documentos proveniente de MongoDB
