@@ -1,4 +1,4 @@
-# Test your FastAPI endpoints
+
 
 GET http://127.0.0.1:8000/
 Accept: application/json
@@ -9,3 +9,56 @@ GET http://127.0.0.1:8000/api/v1/todo/
 Accept: application/json
 
 ###
+
+GET http://127.0.0.1:8000/api/v1/todo/68b53f463077288e8b8aa106
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:8000/api/v1/todo/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Darle de comer a la pelusa",
+    "description": "Ponerle de comer en su plato y agua",
+    "status": "Pendiente",
+    "priority": "Alta",
+    "due_date": "2025-03-05T21:00:00"
+}
+
+###
+
+PUT http://127.0.0.1:8000/api/v1/todo/68b8d2e24a1be713d488a9be
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Darle de comer a la pelusa en la tarde",
+    "description": "Ponerle de comer en su plato y agua",
+    "status": "Pendiente",
+    "priority": "Alta",
+    "due_date": "2025-03-05T21:00:00"
+}
+
+###
+
+PATCH 127.0.0.1:8000/api/v1/todo/68b53f463077288e8b8aa106
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Darle de comer a la pelusa y que se duerma temprano",
+    "description": "Dormir a la pelusa temprano",
+    "status": "Pendiente",
+    "priority": "Alta",
+    "due_date": "2025-03-05T21:00:00"
+}
+
+###
+
+DELETE 127.0.0.1:8000/api/v1/todo/68b8d2e24a1be713d488a9be
+Content-Type: application/json
+Accept: application/json
+
+
